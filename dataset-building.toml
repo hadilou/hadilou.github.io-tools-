@@ -6,7 +6,7 @@
 [common]
 
   # The slippy map dataset's base directory.
-  dataset = '/app/container_mount/container_mount/dataset'
+  #dataset = '/app/container_mount/dataset'
 
   # Human representation for classes.
   classes = ['background', 'building']
