@@ -1,0 +1,32 @@
+# Configuration related to a specific model.
+# For syntax see: https://github.com/toml-lang/toml#table-of-contents
+
+
+# Model specific common attributes.
+[common]
+
+  # Use CUDA for GPU acceleration.
+  cuda       = true
+
+  # Batch size for training.
+  batch_size = 10
+
+  # Image side size in pixels.
+  image_size = 256
+
+  # Directory where to save checkpoints to during training.
+  checkpoint = '/app/container_mount/checkpoints/'
+
+
+# Model specific optimization parameters.
+[opt]
+
+  # Total number of epochs to train for.
+  epochs     = 100
+
+  # Learning rate for the optimizer.
+  lr         = 0.0001
+
+  # Loss function name (e.g 'Lovasz', 'mIoU' or 'CrossEntropy')
+  loss = 'Lovasz'
+  decay = 0.0001
